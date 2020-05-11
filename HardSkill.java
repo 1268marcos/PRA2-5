@@ -1,0 +1,76 @@
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "hardskills")
+
+public class HardSkill {
+
+        @PrimaryKey(autoGenerate = true)
+        @NonNull
+        @ColumnInfo(name = "hardskillId")
+	private int mId;
+
+        @Nullable
+        @ColumnInfo(name = "hardskillName")
+        private String mName;
+
+	public int getId() {
+		return mId;
+	}
+
+	public void setId(@NonNull int id) {
+		mId = id;
+	}
+
+	public String getName() {
+		return mName;
+	}
+
+	public void setName(@Nullable String name) {
+		  mName = name;
+	}
+
+	public String getProvelt() {
+		return mProvelt;
+	}
+
+	public void setProvelt(String provelt) {
+		mProvelt = provelt;
+	}
+
+	public String getCreationDate() {
+		return mCreationDate;
+	}
+
+	public void setCreationDate(String creationDate) {
+		mCreationDate = creationDate;
+	}
+
+
+	private String mProvelt;
+
+	private String mCreationDate;
+
+	public Double getValue() {
+		return mValue;
+	}
+
+	public void setValue(Double value) {
+		mValue = value;
+	}    
+
+        private Double mValue;
+    
+	public HardSkill(int id, String creationDate, String name, String provelt, Double value) {
+		super();
+		mId = id;
+		mCreationDate = creationDate;
+		mName = name;
+		mProvelt = provelt;
+		mValue = value;
+	}
+
+}
